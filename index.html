@@ -610,7 +610,8 @@ function getUserId(){
 }
 
 async function api(path, body){
-  const res = await fetch('/api'+path, {
+const API_URL = 'https://detetivedoamor.onrender.com';
+const res = await fetch(API_URL + path, {
     method:'POST',
     headers:{'Content-Type':'application/json', 'x-user-id': getUserId()},
     body: JSON.stringify(body||{})
